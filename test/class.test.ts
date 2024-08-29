@@ -1,13 +1,20 @@
 describe('Class', () => {
+    class Customer {
+        constructor() {
+            console.info("create new customer");
+        }
+    }
+
+    class Order {
+    }
+
     it('should create class', () => {
-
-        class Customer {
-        }
-
-        class Order {
-        }
-
         const customer: Customer = new Customer();
-        const order = new Order();
+        const order = new Order()
+    });
+
+    it('should create constructor', () => {
+        new Customer();
+        new Customer();
     });
 });
