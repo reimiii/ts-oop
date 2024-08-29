@@ -1,5 +1,3 @@
-import {name} from "ts-jest/dist/transformers/hoist-jest";
-
 describe('Interface can be data or method', () => {
     interface HasName {
         name: string;

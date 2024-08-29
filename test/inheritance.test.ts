@@ -1,5 +1,3 @@
-import {name} from "ts-jest/dist/transformers/hoist-jest";
-
 describe('Inheritance', () => {
     class Employee {
         name: string;
