@@ -10,6 +10,10 @@ describe('Properties or attribute', () => {
             this.id = id;
             this.name = name;
         }
+
+        sayHi(name: string): void {
+            console.info(`hi ${name}, my name is ${this.name}`);
+        }
     }
 
     it('should have props', () => {
@@ -21,5 +25,10 @@ describe('Properties or attribute', () => {
         console.info(customer.name);
         console.info(customer.age);
 
+    });
+
+    it('should have method', () => {
+        const customer: Customer = new Customer(1, "Pacman");
+        customer.sayHi("Migas");
     });
 });
