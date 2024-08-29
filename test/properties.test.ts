@@ -3,7 +3,7 @@ import {name} from "ts-jest/dist/transformers/hoist-jest";
 describe('Properties or attribute', () => {
     class Customer {
         readonly id: number;
-        name: string;
+        name: string = "Guest";
         age?: number;
 
         constructor(id: number, name: string) {
