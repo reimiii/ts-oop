@@ -10,6 +10,10 @@ describe('Polymorphism', () => {
     class VicePresident extends Manager {
     }
 
+    function sayHi(emp: Employee): void {
+        console.info(`hi ${emp._name}`);
+    }
+
     it('should support polymorphism', () => {
         let emp: Employee = new Employee("hilmi");
         console.info(emp);
@@ -19,5 +23,11 @@ describe('Polymorphism', () => {
 
         emp = new VicePresident("hilmi");
         console.info(emp);
+    });
+
+    it('should support polymorphism method', () => {
+        sayHi(new Employee("Mee"));
+        sayHi(new Manager("001"));
+        sayHi(new VicePresident("002"));
     });
 });
