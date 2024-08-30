@@ -1,5 +1,3 @@
-import {name} from "ts-jest/dist/transformers/hoist-jest";
-
 describe('Method Overriding', () => {
     class Employee {
         name: string;
