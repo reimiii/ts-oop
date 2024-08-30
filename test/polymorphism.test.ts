@@ -11,7 +11,15 @@ describe('Polymorphism', () => {
     }
 
     function sayHi(emp: Employee): void {
-        console.info(`hi ${emp._name}`);
+        if (emp instanceof VicePresident) {
+            const vp = emp as VicePresident;
+            console.info(`hi vp ${vp._name}`);
+        } else if (emp instanceof Manager) {
+            const man = emp as Manager;
+            console.info(`hi manager ${man._name}`);
+        } else {
+            console.info(`hi employee ${emp._name}`);
+        }
     }
 
     it('should support polymorphism', () => {
